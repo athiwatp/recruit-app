@@ -28,11 +28,11 @@
 .btn-blue {
   @extend .btn;
 
-  background-color: #1966d0;
+  background-color: $blue-main;
 }
 
 .btn-green {
   @extend .btn;
 
-  background-color: #559d2d;
+  background-color: $green-apple;
 }

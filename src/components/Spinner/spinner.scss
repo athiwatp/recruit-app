@@ -1,6 +1,7 @@
+@import '~stylesheets/variables';
 
 .spinner {
-  color: #559d2d;
+  color: $green-apple;
   position: relative;
   float: left;
   top: 50%;

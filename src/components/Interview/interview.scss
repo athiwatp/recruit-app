@@ -1,11 +1,13 @@
+@import '~stylesheets/variables';
+
 .container {
   display: flex;
   font-family: Roboto;
   padding: 20px 0 0;
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid $light-gray;
   margin: 10px 5px;
   letter-spacing: .5px;
-  color: #545454;
+  color: $label-font;
 
   .avatar {
     width: 20%;

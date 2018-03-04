@@ -1,11 +1,13 @@
+@import '~stylesheets/variables';
+
 .container {
   display: flex;
   font-family: Roboto;
   padding: 20px 0;
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid $light-gray;
   margin: 10px 5px;
   letter-spacing: .5px;
-  color: #545454;
+  color: $label-font;
 
   .logo {
     width: 30%;
@@ -50,14 +52,14 @@
       div {
         display: inline;
         padding: 3px 10px;
-        background-color: #e1e3e6;
+        background-color: $input-border;
         border-radius: 3px;
         margin-right: 5px;
         cursor: pointer;
       }
 
       span {
-        color: #559d2d;
+        color: $green-apple;
         cursor: pointer;
       }
     }
