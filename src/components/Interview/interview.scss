@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  font-family: Roboto;
+  padding: 20px 0 0;
+  border-top: 1px solid #e6e6e6;
+  margin: 10px 5px;
+  letter-spacing: .5px;
+  color: #545454;
+
+  .avatar {
+    width: 20%;
+    text-align: center;
+
+    img {
+      max-width: 100px;
+    }
+  }
+
+  .interview-info {
+    width: 60%;
+    padding: 0 10px;
+
+    .bold {
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .salary-location {
+      font-size: 14px;
+      margin: 15px 0 30px;
+
+      div {
+        margin-bottom: 10px;
+      }
+
+      .salary {
+        margin-bottom: 20px;
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .message {
+      font-size: 13px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .reject-button {
+    width: 20%;
+    text-align: center;
+
+    .state {
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+  }
+}

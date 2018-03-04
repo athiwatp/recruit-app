@@ -1,0 +1,14 @@
+@import '~stylesheets/variables';
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-left: 18px;
+  display: inline-block;
+  border: solid 2px #3c9eed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}

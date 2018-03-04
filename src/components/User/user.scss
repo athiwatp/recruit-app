@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  font-family: Roboto;
+  padding: 20px 0 0;
+  border-top: 1px solid #e6e6e6;
+  margin: 10px 5px;
+  letter-spacing: .5px;
+  color: #545454;
+
+  .avatar {
+    width: 20%;
+    text-align: center;
+
+    img {
+      max-width: 100px;
+    }
+  }
+
+  .user-info {
+    width: 60%;
+    padding: 0 10px;
+
+    .bold {
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .contact {
+      font-size: 14px;
+      margin: 15px 0;
+
+      div {
+        display: inline;
+        margin: auto 50px 10px 0;
+      }
+
+      .salary {
+        margin-bottom: 20px;
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .job-preference {
+      font-size: 13px;
+      margin-bottom: 15px;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .message {
+      font-size: 13px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .activen {
+    width: 20%;
+    text-align: center;
+    letter-spacing: 1px;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "presets": [
+    ["env", { "modules": false }],
+    "stage-2",
+    "react"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-remove-prop-types",
+        "transform-react-inline-elements"
+      ]
+    },
+    "development": {
+      "plugins": [
+        "transform-react-jsx-source"
+      ]
+    },
+    "test": {
+      "presets": [
+        ["latest"],
+        "stage-2",
+        "react"
+      ],
+      "plugins": [
+        "syntax-dynamic-import",
+        "transform-react-jsx-source"
+      ]
+    }
+  }
+}

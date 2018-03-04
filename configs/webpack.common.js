@@ -1,0 +1,28 @@
+const path    = require('path');
+const paths   = require('./webpack.paths.js');
+const plugins = require('./webpack.plugins.js');
+
+module.exports = {
+  entry: {
+    app: ['babel-polyfill', path.resolve(paths.src, 'index.js')],
+  },
+  output: {
+    path:          paths.dist,
+    // publicPath:    './',
+    filename:      '[name].js',
+    chunkFilename: '[name].js',
+  },
+  resolve: {
+    modules: [
+      paths.root,
+      'node_modules',
+    ],
+    alias: Object.assign({}, paths, {
+      // fill in other customizations
+    }),
+    extensions: ['.js', '.jsx', '.json', 'scss', 'css'],
+  },
+  plugins: [
+    plugins.configOpts,
+  ],
+};

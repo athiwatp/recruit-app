@@ -1,0 +1,12 @@
+.container {
+  background-color: #f5f8fb;
+  min-height: 100%;
+
+  .tab {
+    margin: auto 15%;
+    padding-bottom: 1.5em;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    background-color: white;
+  }
+}

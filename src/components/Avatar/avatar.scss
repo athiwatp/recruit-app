@@ -1,0 +1,139 @@
+@import '~stylesheets/variables';
+
+.title {
+  display: inline-block;
+  font-size: 18px;
+  font-family: 'Roboto';
+  color: $dark;
+  margin: 0;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.list-content {
+  margin: 0 auto;
+  position: relative;
+}
+
+.link-dashboard {
+  text-decoration: none;
+  color: $dark-gray;
+  margin-left: 60px;
+}
+
+.account-content {
+  float: right;
+  border: 0;
+  outline: none;
+  padding: 13px 15% 0 0;
+
+  button {
+    background-color: #1966d0;
+    border: 0;
+    cursor: pointer;
+
+    &:focus {
+      outline-width: 0;
+    }
+  }
+}
+
+.user-name {
+  font-family: Poppins;
+  line-height: 30px;
+  display: inline-block;
+  margin: 0;
+  letter-spacing: .1px;
+  color: $warm-grey-two;
+}
+
+.caret {
+  display: inline-block;
+  vertical-align: middle;
+  border-style: solid;
+  border-color: $white transparent transparent;
+  border-width: 4px 4px 0;
+}
+
+.name {
+  font-size: 13px;
+  color: white;
+  margin: 0 7px;
+}
+
+@mixin borderBasicBottom($top, $width, $color) {
+  position: absolute;
+  display: block;
+  border-color: transparent;
+  border-style: solid;
+  box-sizing: border-box;
+  content: "";
+  border-width: $width;
+  top: $top;
+  border-top-width: 0;
+  border-bottom-color: $color;
+}
+
+.popover {
+  position: absolute;
+  background-color: $white-three;
+  box-shadow: 0 2px 4px 0 rgba($shadow-gray, .5);
+  z-index: 1;
+  top: 60px;
+  right: 220px;
+  display: inline-block;
+  border: solid 1px $pale-grey-three;
+
+  &::before {
+    @include borderBasicBottom(-11px, 11px, $shadow-gray);
+
+    top: -11px;
+    right: 30px;
+  }
+
+  &::after {
+    @include borderBasicBottom(-10px, 10px, $white-three);
+
+    right: 31px;
+  }
+}
+
+.list-style {
+  list-style-type: none;
+  padding: 0 14px;
+  margin: 0;
+  text-align: left;
+  min-width: 150px;
+
+  li {
+    padding: 14px 9px 6px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: $warm-grey-two;
+    font-size: 13px;
+
+    &:hover:last-child {
+      color: $skyblue;
+    }
+
+    &:last-child {
+      padding: 14px 9px;
+    }
+  }
+
+  .header-item {
+    padding: 14px 0;
+  }
+
+  .link-item {
+    padding: 9px 0 9px 9px;
+    border-bottom: 1px solid $pale-grey-three;
+    line-height: 1.5;
+    font-weight: 600;
+
+    small {
+      display: block;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import '~stylesheets/variables';
+
+.btn {
+  position: relative;
+  min-width: 160px;
+  height: 41px;
+  line-height: 1.5;
+  background-color: transparent;
+  border-radius: 3px;
+  padding: 10px 17px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: $white;
+  font-family: Roboto;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  transition: background-color, opacity .2s;
+  -webkit-font-smoothing: antialiased;
+
+  &[type="submit"] {
+    padding: 10px 42px;
+  }
+}
+
+.btn-blue {
+  @extend .btn;
+
+  background-color: #1966d0;
+}
+
+.btn-green {
+  @extend .btn;
+
+  background-color: #559d2d;
+}

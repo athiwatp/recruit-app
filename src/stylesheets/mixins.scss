@@ -1,0 +1,193 @@
+// the breakpoints are aligned with the grid system 'flexbox-grid' we are using.
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
+
+@mixin responsive($size) {
+  @media only screen and (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @include responsive(sm) { @content; }
+}
+
+@mixin md {
+  @include responsive(md) { @content; }
+}
+
+@mixin lg {
+  @include responsive(lg) { @content; }
+}
+
+@mixin absolute-center($type: null) {
+  position: absolute;
+  margin: auto;
+
+  @if $type == 'horizontal' {
+    left: 0;
+    right: 0;
+  }
+
+  @else if $type == 'vertical' {
+    top: 0;
+    bottom: 0;
+  }
+
+  @else {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+@mixin FontDimensionStyle($font-family, $font-size, $color, $text-align: center) {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $color;
+  text-align: $text-align;
+}
+
+@mixin setFont($font-family, $font-size, $color, $font-weight: 500) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin missingContentLogo($url) {
+  background: url($url) no-repeat;
+  width: 66px;
+  height: 85px;
+  display: inline-block;
+}
+
+@mixin maskChild($image, $width, $height, $margin-left, $margin-top) {
+  background: url($image) no-repeat center;
+  background-size: cover;
+  width: $width;
+  height: $height;
+  display: inline-block;
+  vertical-align: middle;
+  margin: $margin-top 0 0 $margin-left;
+}
+
+@mixin pictureBlockTheme($padding) {
+  display: inline-block;
+  width: 30px;
+  height: 24px;
+  background: url(images/picture-icon.svg) no-repeat center;
+  border: 1px dashed $input-border;
+  padding: $padding;
+}
+
+@mixin sideElementBase($width, $height, $position: absolute) {
+  width: $width;
+  height: $height;
+  display: inline-block;
+  content: '';
+  position: $position;
+  box-sizing: border-box;
+}
+
+@mixin socialLoginButton($icon, $icon-hover) {
+  cursor: pointer;
+  border-radius: 5px;
+  height: 41px;
+  width: 240px;
+  color: $social-btn;
+  border: solid 1px $social-btn;
+  background: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  letter-spacing: .5px;
+  outline: 0;
+  transition: background .5s;
+
+  span {
+    display: inline-block;
+    line-height: 19px;
+    vertical-align: middle;
+  }
+
+  &::before {
+    @include sideElementBase(17px, 18px, inherit);
+
+    background: url('images/#{$icon}') no-repeat center;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+
+  &:hover {
+    color: $white;
+    background: linear-gradient(to right, $skyblue, $cornflower-blue);
+    border-color: transparent;
+
+    &::before {
+      background: url('images/#{$icon-hover}') no-repeat center;
+    }
+  }
+}
+
+@mixin setIcon($width, $height, $url) {
+  width: $width;
+  height: $height;
+  background: url($url) no-repeat center;
+  margin: 0 auto 43px;
+}
+
+@mixin borderBasic($width) {
+  position: absolute;
+  display: block;
+  border-color: transparent;
+  border-style: solid;
+  box-sizing: border-box;
+  content: "";
+  border-width: $width;
+}
+
+@mixin borderBasicBottom($top, $width, $color) {
+  @include borderBasic($width);
+
+  top: $top;
+  border-top-width: 0;
+  border-bottom-color: $color;
+}
+
+@mixin borderBasicTop($bottom, $width, $color) {
+  @include borderBasic($width);
+
+  bottom: $bottom;
+  border-bottom-width: 0;
+  border-top-color: $color;
+}
+
+@mixin absoluteBasic($color) {
+  position: absolute;
+  background-color: $color;
+  box-shadow: 0 2px 4px 0 rgba($shadow-gray, .5);
+  z-index: 1;
+}
+
+@mixin absoluteBasicBottom($top, $right, $color) {
+  @include absoluteBasic($color);
+
+  top: $top;
+  right: $right;
+}
+
+@mixin absoluteBasicTop($bottom, $left, $color) {
+  @include absoluteBasic($color);
+
+  bottom: $bottom;
+  left: $left;
+}
+
