@@ -1,11 +1,3 @@
-// ********************************
-//
-// If you are going to change these rules,
-// please make sure they stays consistent with our style guide:
-// https://resumecompanion.github.io/gitbooks/taroko-frontend-bible/code-style-guideline/javascript-guide.html
-//
-// ********************************
-
 module.exports = {
   'root': true,
   'env': {
@@ -101,7 +93,6 @@ module.exports = {
     'react/jsx-closing-bracket-location': 'error',
     'react/no-multi-comp':                [ 'warn', { 'ignoreStateless': true } ],
     'jsx-quotes':                         'error',
-    'react/jsx-space-before-closing':     'error',
     'react/jsx-curly-spacing':            'error',
     'react/jsx-boolean-value':            'warn',
     'react/jsx-wrap-multilines':          'error',
