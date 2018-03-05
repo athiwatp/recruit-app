@@ -1,10 +1,21 @@
+@import '~stylesheets/variables';
+
 .container {
-  background-color: #1966d0;
+  background-color: $blue-main;
+
+  .subcontainer {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
 
   .title {
     display: inline-block;
     color: white;
-    padding: 20px 0 20px 15%;
+    padding: 20px 0;
     font-family: Roboto;
   }
 }

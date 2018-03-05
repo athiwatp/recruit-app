@@ -6,8 +6,10 @@ import style from './header.scss';
 const Header = ({ logout, path, user }) => {
   return (
     <div className={style.container}>
-      <div className={style.title}>RecruitApp</div>
-      <Avatar logout={logout} path={path} user={user} />
+      <div className={style.subcontainer}>
+        <div className={style.title}>RecruitApp</div>
+        <Avatar logout={logout} path={path} user={user} />
+      </div>
     </div>
   );
 };
