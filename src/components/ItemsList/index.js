@@ -19,6 +19,6 @@ export default class ItemsList extends PureComponent {
 
   render () {
     const { data, renderItem } = this.props;
-    return <div>{data.map(renderItem)}</div>;
+    return data.map(renderItem);
   }
 }
